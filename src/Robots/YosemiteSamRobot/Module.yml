@@ -3,7 +3,7 @@ Description: Robot that runs around randomly firing missiles in all directions
 Version: 1.0-DEV
 Items:
 
-  - Function: RobotFunction
+  - Function: YosemiteSamRobotFunction
     Memory: 256
     Timeout: 30
 
@@ -11,13 +11,13 @@ Items:
     Type: AWS::Lambda::Permission
     Properties:
       Action: lambda:InvokeFunction
-      FunctionName: !Ref RobotFunction
+      FunctionName: !Ref YosemiteSamRobotFunction
       Principal: "*"
 
   - Variable: RobotArn
     Description: Lambda function ARN
     Scope: public
-    Value: !GetAtt RobotFunction.Arn
+    Value: !GetAtt YosemiteSamRobotFunction.Arn
 
   - Resource: RobotStateTable
     Description: Table for holding the state of the robot
