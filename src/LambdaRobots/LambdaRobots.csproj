@@ -8,12 +8,12 @@
     <NoWarn>CS1998</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Amazon.Lambda.Core" Version="1.1.0"/>
-    <PackageReference Include="Amazon.Lambda.Serialization.Json" Version="1.5.0"/>
-    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.3.101.71"/>
+    <PackageReference Include="Amazon.Lambda.Core" Version="1.1.0" />
+    <PackageReference Include="Amazon.Lambda.Serialization.Json" Version="1.7.0" />
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.3.105.30" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Condition="'$(LAMBDASHARP)'==''" Include="LambdaSharp" Version="0.7.0.*"/>
+    <PackageReference Condition="'$(LAMBDASHARP)'==''" Include="LambdaSharp" Version="0.7.0.*" />
     <ProjectReference Condition="'$(LAMBDASHARP)'!=''" Include="$(LAMBDASHARP)/src/LambdaSharp/LambdaSharp.csproj" />
   </ItemGroup>
 </Project>
